@@ -80,9 +80,9 @@ function breakup (ctc, investment, misc) {
   ret.push ( ["Total Taxable", lakhs ( taxable)])
 
   slabs = [
-    [[1.8e5, 5e5], 10.0],
-    [[5e5, 8e5], 20.0],
-    [[8e5, Infinity], 30.0],
+    [[2e5, 5e5], 10.0],
+    [[5e5, 10e5], 20.0],
+    [[10e5, Infinity], 30.0],
   ]
 
   tax = slabs.reduce (function (tax, slab, i, slabs) {

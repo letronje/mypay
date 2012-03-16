@@ -1,4 +1,4 @@
-def worth(ctc, investment=0, misc_nontaxable_benefits=0, slabtype=:old)
+def worth(ctc, investment=0, misc_nontaxable_benefits=0, slabtype=:new)
   nontaxable = investment + misc_nontaxable_benefits
   taxable = ctc - nontaxable
   inf = (1/0.0)
@@ -9,9 +9,9 @@ def worth(ctc, investment=0, misc_nontaxable_benefits=0, slabtype=:old)
            [8e5..inf, 30.0]
             ],
     :new => [
-           [5e5..10e5, 10.0],
-           [10e5..20e5, 20.0],
-           [20e5..inf, 30.0]
+           [2e5..5e5, 10.0],
+           [5e5..10e5, 20.0],
+           [10e5..inf, 30.0]
           ]
   }[slabtype]  
 
@@ -30,7 +30,7 @@ def worth(ctc, investment=0, misc_nontaxable_benefits=0, slabtype=:old)
   }
 end
 
-def ctc(target_inhand_per_month, investment, misc_benefits, slabtype=:old)
+def ctc(target_inhand_per_month, investment, misc_benefits, slabtype=:new)
   min = target_inhand_per_month*12
   max = min*1.5
 
